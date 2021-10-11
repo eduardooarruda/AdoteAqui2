@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-
+from .entidades import Usuario
 
 bp = Blueprint('usuario', __name__, url_prefix='/usuario', template_folder='templates')
 
