@@ -18,6 +18,7 @@ def cadastro():
 def cadastrarUsuario():
     usuario = Usuario()
     usuario.username = request.form['username']
+    usuario.nome = request.form['nome']
     usuario.senha = request.form['senha']
     usuario.telefone = request.form['telefone']
     usuario.email = request.form['email']
@@ -25,7 +26,7 @@ def cadastrarUsuario():
     db.session.add(usuario)
     db.session.commit()
 
-    return redirect('/usuario/cadastro')
+    return redirect('/')
 
 
 @bp.route('/login')
