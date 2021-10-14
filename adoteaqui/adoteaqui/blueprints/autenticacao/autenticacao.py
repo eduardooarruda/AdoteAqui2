@@ -30,5 +30,26 @@ def cadastrarUsuario():
     flash('Cadastro feito com sucesso!')
     return redirect(url_for('usuario.login'))
 
+
+@bp.post('/login')
+def login():
+
+    username = request.form['usernameLogin']
+    senha = request.form['senhaLogin']
+
+    usuario = Usuario.query.filter_by(username=username).first()
+
+    if usuario:
+        if bcrypt.check_password_hash(usuario.senha, senha):
+            flash(f'Seja bem vindo {usuario.nome}!')
+            return redirect(url_for('usuario.login'))
+        else:
+            flash('Senha incorreta!')
+            return redirect(url_for('usuario.login'))
+    else:
+        flash('Usuário não existe!')
+        return redirect(url_for('usuario.login'))
+
+
 def init_app(app):
     app.register_blueprint(bp)
