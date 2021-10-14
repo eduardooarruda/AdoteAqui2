@@ -4,3 +4,4 @@ toml
 flaskstarter
 flask-sqlalchemy
 flask-migrate
+mysqlclient
