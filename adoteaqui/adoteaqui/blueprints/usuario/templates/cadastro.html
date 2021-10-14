@@ -55,10 +55,10 @@
 
         <div class="form-group col-sm-3">
           <label for="inputEstado" class="form-label">Estado:</label>
-          <select class="form-select" aria-label="Default select example" id="inputEstadp">
-            <option value="1" selected>CE</option>
-            <option value="2">SP</option>
-            <option value="3">RO</option>
+          <select class="form-select" aria-label="Default select example" id="inputEstadp" name="estado">
+            {% for estado in Estados %}
+                <option value="{{estado}}">{{Estados[estado]}}</option>
+            {% endfor %}
           </select>
         </div>
 
