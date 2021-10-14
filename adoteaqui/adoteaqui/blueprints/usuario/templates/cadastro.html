@@ -4,6 +4,15 @@
 
 {% block conteudo %}
 
+{% with mensagens = get_flashed_messages() %}
+{% if mensagens %}
+<div class="alert alert-warning text-center" role="alert">
+  {% for mensagem in mensagens %}
+  <h2>{{mensagem}}</h2>
+  {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
 
 <div class="row justify-content-center my-5 font-monospace">
   <div class="col-sm-12 col-md-10 col-lg-8 formulario ">
