@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, flash, url_for
 from .entidades import Usuario
 from ...ext.database import db
 
@@ -26,7 +26,8 @@ def cadastrarUsuario():
     db.session.add(usuario)
     db.session.commit()
 
-    return redirect('/')
+    flash('Cadastro feito com sucesso!')
+    return redirect(url_for('usuario.login'))
 
 
 @bp.route('/login')
