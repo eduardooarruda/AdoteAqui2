@@ -18,13 +18,33 @@ def cadastrarUsuario():
         return redirect(url_for('usuario.cadastro'))
 
     usuario = Usuario()
+    # endereco = Endereco()
+
     usuario.username = request.form['username']
     usuario.nome = request.form['nome']
     usuario.senha = bcrypt.generate_password_hash(request.form['senha'])
     usuario.telefone = request.form['telefone']
     usuario.email = request.form['email']
 
+    usuario.estado = request.form['estado']
+    usuario.cidade = request.form['cidade']
+    usuario.bairro = request.form['bairro']
+    usuario.rua = request.form['rua']
+    usuario.numero = request.form['numero']
+
+    usuario.facebook = request.form['facebook']
+    usuario.instagram = request.form['instagram']
+    usuario.whatsapp = request.form['whatsapp']
+    usuario.telegram = request.form['telegram']
+
+    # endereco.estado = request.form['estado']
+    # endereco.cidade = request.form['cidade']
+    # endereco.bairro = request.form['bairro']
+    # endereco.rua = request.form['rua']
+    # endereco.numero = request.form['numero']
+
     db.session.add(usuario)
+    # db.session.add(endereco)
     db.session.commit()
 
     flash('Cadastro feito com sucesso!')
