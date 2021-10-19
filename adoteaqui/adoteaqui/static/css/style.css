@@ -6,3 +6,38 @@
 body {
   background-color: #86e9b2;
 }
+
+nav div {
+     background-color: rgb(11, 218, 80);
+ }
+
+/*Css da barra de navergação */
+ nav ul {
+     margin: 0;
+     padding: 0;
+ }
+
+ nav a{
+     color: rgb(0, 0, 0);
+     padding: 10px;
+     display: block;
+     font-size: 25px;
+
+ }
+
+ nav li {
+     float: left;
+ }
+
+ nav a:hover {
+     background-color: white;
+     color: rgb(11, 218, 80);
+ }
+
+ nav img{
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 10%;
+
+ }
