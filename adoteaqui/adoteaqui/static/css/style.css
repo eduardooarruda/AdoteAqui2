@@ -1,17 +1,17 @@
-.formulario {
-  background-color: #52b67f;
-  border-radius: 5px;
-}
+/*.formulario {*/
+/*  background-color: #52b67f;*/
+/*  border-radius: 5px;*/
+/*}*/
 
 body {
   background-color: #86e9b2;
 }
 
-nav div {
-     background-color: rgb(11, 218, 80);
- }
-
 /*Css da barra de navergação */
+nav{
+  background-color: rgb(11, 218, 80);
+}
+
  nav ul {
      margin: 0;
      padding: 0;
@@ -41,3 +41,35 @@ nav div {
     width: 10%;
 
  }
+
+ /*Para os formularios*/
+ .formulario {
+  background-color: #52b67f;
+  border: 3px solid blueviolet;
+  border-radius: 5px;
+}
+
+.botao {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.botao:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+  transform: translate(0px, -10px) scale(1.2);
+}
+
+.entrada:hover {
+  border: 3px solid blueviolet;
+}
+
+label {
+  font-size: 20px;
+}

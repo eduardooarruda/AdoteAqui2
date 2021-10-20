@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Cadastrar Animal{% endblock %}
+
+{% block conteudo %}
+<div class="row justify-content-center my-5 font-monospace">
+  <div class="col-sm-12 col-md-10 col-lg-8 formulario ">
+
+    <img src="/static/img/logo.png" class="rounded mx-auto d-block " alt="logo do Adote Aqui" height="200">
+
+    <form action="{{url_for('autenticacao.cadastrarUsuario')}}" method="POST" enctype="multipart/form-data">
+
+      <div class="form-row row">
+
+        <h3 class="text-center fs-1">Cadastro do Pet</h3>
+
+        <div class="form-group col-sm-12">
+          <img src="/static/img/previewAnimal.jpg" id="imagemDoPet" class="rounded mx-auto d-block my-3" alt="Imagem do animal" height="200">
+          <label for="imagem" class="form-label ">Escolha uma imagem</label>
+          <input class="form-control" type="file" id="imagem" name="imagemPet" onchange="previewImagem()">
+        </div>
+
+        <div class="form-group col-sm-12">
+          <label for="inputNome" class="form-label mt-2 rotulo">Nome:</label>
+          <input type="text" class="form-control entrada" id="inputNome" placeholder="Nome do animal" name="nomePet" required>
+        </div>
+
+        <div class="form-group col-sm-3">
+          <label for="inputTipo" class="form-label mt-2">Tipo:</label>
+          <select class="form-select entrada" aria-label="Default select example" id="inputTipo" name="tipoPet">
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+          </select>
+        </div>
+
+        <div class="form-group col-sm-2">
+          <label for="inputSexo" class="form-label mt-2">Sexo:</label>
+          <select class="form-select entrada" aria-label="Default select example" id="inputSexo" name="sexoPet">
+            <option value="Masculino">M</option>
+            <option value="Feminino">F</option>
+          </select>
+        </div>
+
+        <div class="form-group col-sm-7">
+          <label for="inputRaca" class="form-label mt-2">Raça:</label>
+          <input type="text" class="form-control entrada" id="inputRaca" placeholder="Raça do animal" name="racaPet" required>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="inputAno" class="form-label mt-2">Ano de nascimento:</label>
+          <input type="number" class="form-control entrada" id="inputAno" placeholder="" name="anoPet" required>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label for="inputSituacao" class="form-label mt-2">Situação:</label>
+          <select class="form-select entrada" aria-label="Default select example" id="inputSituacao" name="situacaoPet">
+            <option value="Abrigado">Abrigado</option>
+            <option value="Rua">Rua</option>
+          </select>
+        </div>
+
+        <div class="form-group col-sm-12">
+          <label for="inputDescricao" class="form-label">Descrição</label>
+          <textarea class="form-control entrada" id="inputDescricao" rows="5" placeholder="Descrição do animal" name="descricaoPet"></textarea>
+        </div>
+
+        <h3 class="text-center fs-1 mt-3">Endereço</h3>
+
+        <div class="form-group col-sm-3">
+          <label for="inputEstado" class="form-label ">Estado:</label>
+          <select class="form-select entrada" aria-label="Default select example" id="inputEstadp" name="estado">
+          {% for estado in estados %}
+               <option value="{{estado}}">{{estados[estado]}}</option>
+          {% endfor %}
+          </select>
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label for="inputCidade" class="form-label">Cidade:</label>
+          <input type="text" class="form-control entrada" id="inputCidade" placeholder="" name="cidadePet" required>
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label for="inputBairro" class="form-label">Bairro:</label>
+          <input type="text" class="form-control entrada" id="inputBairro" placeholder="" name="bairroPet" required>
+        </div>
+
+        <div class="form-group col-sm-9">
+          <label for="inputRua" class="form-label mt-2">Rua:</label>
+          <input type="text" class="form-control entrada" id="inputRua" placeholder="" name="ruaPet" required>
+        </div>
+
+        <div class="form-group col-sm-3">
+          <label for="inputNumero" class="form-label mt-2">Número:</label>
+          <input type="number" class="form-control entrada" id="inputNumero" placeholder="" name="numeroPet" required>
+        </div>
+
+        <div class="form-group col-12 text-center">
+          <button type="submit" class="btn my-3 btn-secondary botao"><span class="mx-5">Cadastrar</span></button>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+  function previewImagem() {
+    var imagem = document.querySelector('input[name=imagemPet]').files[0];
+    var preview = document.querySelector('img[id=imagemDoPet]');
+    var reader = new FileReader();
+    reader.onloadend = function() {
+      preview.src = reader.result;
+    }
+    if (imagem) {
+      reader.readAsDataURL(imagem);
+    } else {
+      preview.src = "/static/img/previewAnimal.jpg";
+    }
+  }
+</script>
+
+{% endblock %}
