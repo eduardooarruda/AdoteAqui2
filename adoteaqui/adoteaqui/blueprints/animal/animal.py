@@ -1,10 +1,7 @@
 from flask import Blueprint, render_template
-# from .entidades import Usuario
-# from ...ext.database import db
 
 
-bp = Blueprint('usuario', __name__, url_prefix='/usuario', template_folder='templates')
-
+bp = Blueprint('animal', __name__, url_prefix='/animal', template_folder='templates')
 
 Estados ={
     'Acre':'AC',
@@ -34,21 +31,14 @@ Estados ={
     'Sergipe': 'SE',
     'Tocantins': 'TO'
 }
+
 # @bp.route('/')
 # def root():
-#     return 'Hello from usuario'
+#     return 'Hello from animal'
 
-@bp.route('/cadastro')
-def cadastro():
-    return render_template('cadastro.html', Estados=Estados)
-
-@bp.route('/login')
-def login():
-    return render_template('login.html')
-
-@bp.route('/atualizarPerfil')
-def atualizarPerfil():
-    return render_template('GerenciamentoUsuario.html')
+@bp.route('/cadastroAnimal')
+def cadastroAnimal():
+    return render_template('cadastrarAnimal.html', estados=Estados)
 
 def init_app(app):
     app.register_blueprint(bp)
