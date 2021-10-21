@@ -73,3 +73,53 @@ nav{
 label {
   font-size: 20px;
 }
+
+/*Estilo da página Perfil de Usuário*/
+.padding {
+    padding: 3rem !important
+}
+
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#9370DB), to(#006400));
+    background: linear-gradient(to right, #9370DB, #FFC0CB)
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.user-card-full {
+    overflow: hidden
+}
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.modal-personalizado{
+        min-width: 90%;
+        margin-left: 80;
+}
