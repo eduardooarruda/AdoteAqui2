@@ -39,12 +39,20 @@
                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Pets
                 </a>
-
                  <ul class="dropdown-menu" aria-atomic="navbarDropdown">
                   <li><a class="dropdown-item" href="{{url_for('animal.cadastroAnimal')}}">Cadastrar Pet</a></li>
                  </ul>
-
                 </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuário
+                </a>
+                 <ul class="dropdown-menu" aria-atomic="navbarDropdown">
+                  <li><a class="dropdown-item" href="{{url_for('usuario.atualizarPerfil')}}">Atualizar perfil</a></li>
+                 </ul>
+                </li>
+
             </ul>
 
           </div>
