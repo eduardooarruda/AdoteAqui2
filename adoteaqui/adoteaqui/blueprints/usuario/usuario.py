@@ -50,5 +50,9 @@ def login():
 def atualizarPerfil():
     return render_template('GerenciamentoUsuario.html')
 
+@bp.route('/perfilUsuario')
+def perfilUsuario():
+    return render_template('paginaUsuario.html')
+
 def init_app(app):
     app.register_blueprint(bp)
