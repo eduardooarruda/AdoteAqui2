@@ -34,9 +34,9 @@ Estados ={
     'Sergipe': 'SE',
     'Tocantins': 'TO'
 }
-# @bp.route('/')
-# def root():
-#     return 'Hello from usuario'
+@bp.route('/')
+def root():
+    return 'Hello from usuario'
 
 @bp.route('/cadastro')
 def cadastro():
