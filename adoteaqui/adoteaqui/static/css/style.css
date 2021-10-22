@@ -74,6 +74,7 @@ label {
   font-size: 20px;
 }
 
+
 /*Estilo da página Perfil de Usuário*/
 .padding {
     padding: 3rem !important
@@ -123,3 +124,20 @@ h6 {
         min-width: 90%;
         margin-left: 80;
 }
+=======
+/*Para a página de sobre.html*/
+
+.sobre {
+  border: 2px solid blueviolet;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.conteudo {
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
