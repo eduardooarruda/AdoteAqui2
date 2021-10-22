@@ -9,7 +9,7 @@ body {
 
 /*Css da barra de navergação */
 nav{
-  background-color: #a5f7fa;
+  background-color:  rgb(11, 218, 80);
 }
 
  nav ul {
@@ -134,7 +134,7 @@ h6 {
 }
 
 .conteudo {
-  background-image: url(https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759_960_720.jpg);
+  background-image: url(/static/img/gatoEcachorro.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -148,7 +148,7 @@ h6 {
 }
 
 #header {
-  background: url(https://cdn.pixabay.com/photo/2017/04/11/15/55/animals-2222007_960_720.jpg) center center / cover no-repeat ;
+  background: url(/static/img/animais.jpg) center center / cover no-repeat ;
   color: green;
   height: 200px;
   border-radius: 10px;

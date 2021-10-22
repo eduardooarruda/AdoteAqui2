@@ -24,6 +24,9 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('root')}}">Inicio</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{url_for('sobre.sobre')}}">Sobre</a>
               </li>
@@ -50,6 +53,7 @@
                 </a>
                  <ul class="dropdown-menu" aria-atomic="navbarDropdown">
                   <li><a class="dropdown-item" href="{{url_for('usuario.atualizarPerfil')}}">Atualizar perfil</a></li>
+                  <li><a class="dropdown-item" href="{{url_for('usuario.perfilUsuario')}}">Lista de usuarios</a></li>
                  </ul>
                 </li>
 
