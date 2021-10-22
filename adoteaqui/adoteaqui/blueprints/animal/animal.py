@@ -40,5 +40,9 @@ Estados ={
 def cadastroAnimal():
     return render_template('cadastrarAnimal.html', estados=Estados)
 
+@bp.route('/pets')
+def pets():
+    return render_template('listaAnimais.html')
+
 def init_app(app):
     app.register_blueprint(bp)

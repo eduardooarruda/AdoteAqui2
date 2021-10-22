@@ -77,54 +77,54 @@ label {
 
 /*Estilo da página Perfil de Usuário*/
 .padding {
-    padding: 3rem !important
+    padding: 3rem !important;
 }
 
 .bg-c-lite-green {
     background: -webkit-gradient(linear, left top, right top, from(#9370DB), to(#006400));
-    background: linear-gradient(to right, #9370DB, #FFC0CB)
+    background: linear-gradient(to right, #9370DB, #FFC0CB);
 }
 
 .p-b-5 {
-    padding-bottom: 5px !important
+    padding-bottom: 5px !important;
 }
 
 .b-b-default {
-    border-bottom: 1px solid #e0e0e0
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .m-l-0 {
-    margin-left: 0px
+    margin-left: 0px;
 }
 
 .m-r-0 {
-    margin-right: 0px
+    margin-right: 0px;
 }
 
 .card-block {
-    padding: 1.25rem
+    padding: 1.25rem;
 }
 
 .user-card-full {
-    overflow: hidden
+    overflow: hidden;
 }
 .m-b-25 {
-    margin-bottom: 25px
+    margin-bottom: 25px;
 }
 
 h6 {
-    font-size: 14px
+    font-size: 14px;
 }
 
 .f-w-600 {
-    font-weight: 600
+    font-weight: 600;
 }
 
 .modal-personalizado{
         min-width: 90%;
         margin-left: 80;
 }
-=======
+
 /*Para a página de sobre.html*/
 
 .sobre {
@@ -138,6 +138,28 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+/*Para a página de listaAnimais.html*/
+
+.cartao{
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+}
+
+#header {
+  background: url(https://cdn.pixabay.com/photo/2017/04/11/15/55/animals-2222007_960_720.jpg) center center / cover no-repeat ;
+  color: green;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.texto{
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  border: 1px solid blueviolet;
+   border-radius: 10px;
 }
 
 
